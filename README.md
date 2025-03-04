@@ -22,9 +22,12 @@ Remove outliers using IQR<br>
 STEP 6<br>
 Use zscore of to remove outliers<br>
 ## PROGRAM:
-DEVELOPED BY : SHANMUGA RAJ.K
+DEVELOPED BY : SHANMUGA RAJ.K <br>
 REG NO : 212223040192
-### Client:
+### Codeing:
+<div align="center">
+### Data Cleaning
+</div>
 ```
 import pandas as pd
 data=pd.read_csv("/content/SAMPLEIDS.csv")
