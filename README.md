@@ -3,7 +3,7 @@
 ## AIM
 To read the given data and perform data cleaning and save the cleaned data to a file.
 ## ALGORITHM:
-STEP 1
+STEP 1<br>
 Read the given Data
 STEP 2
 Get the information about the data
