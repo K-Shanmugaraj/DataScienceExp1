@@ -24,7 +24,7 @@ Use zscore of to remove outliers<br>
 ## PROGRAM:
 DEVELOPED BY : SHANMUGA RAJ.K <br>
 REG NO : 212223040192
-## Coding:
+## CODING:
 ### Data Cleaning:
 
 ```
@@ -112,35 +112,52 @@ delid
  sns.boxplot(x='sepal_width',data=delid)
 ```
 ![Screenshot 2025-03-04 104505](https://github.com/user-attachments/assets/e783ee3c-b07e-4a8b-bf5e-3a95b4673028)
+### Z-Score:
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ import matplotlib.pyplot as plt
+ import numpy as np
+ import scipy.stats as stats
+ dataset=pd.read_csv("/content/heights.csv")
+ dataset
 ```
 ![Screenshot 2025-03-04 104512](https://github.com/user-attachments/assets/216cfefe-2807-48f0-a8db-f24dd0e46db4)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ df = pd.read_csv("heights.csv")
+ q1 = df['height'].quantile(0.25)
+ q2 = df['height'].quantile(0.5)
+ q3 = df['height'].quantile(0.75)
+ iqr = q3-q1
+ iqr
 ```
 ![Screenshot 2025-03-04 104525](https://github.com/user-attachments/assets/6d55796b-7b73-497d-be18-8d249eafc0fb)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ low = q1- 1.5*iqr
+ low
 ```
 ![Screenshot 2025-03-04 104533](https://github.com/user-attachments/assets/a695edb9-c09c-41fd-8770-98b0bfc340e7)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ high = q3 + 1.5*iqr
+ high
 ```
 ![Screenshot 2025-03-04 104541](https://github.com/user-attachments/assets/015c1ab6-efa1-4915-a1a8-ce3c2b95def5)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ df1 = df[((df['height'] >=low)& (df['height'] <=high))]
+ df1
 ```
 ![Screenshot 2025-03-04 104550](https://github.com/user-attachments/assets/cdc8e7c7-407b-4eb9-9676-c277ea45ed2e)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ z = np.abs(stats.zscore(df['height']))
+ z
 ```
 ![Screenshot 2025-03-04 104559](https://github.com/user-attachments/assets/482b9bc0-f22b-4bad-97a5-2587c290ed4e)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+df1 = df[z<3]
+df1
 ```
 ![Screenshot 2025-03-04 104608](https://github.com/user-attachments/assets/28823442-4103-45a1-a4f2-f064f9e5ea01)
 
+## RESULT
+Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
 
 
 
