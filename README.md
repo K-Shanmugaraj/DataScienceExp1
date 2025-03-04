@@ -97,14 +97,19 @@ c3=ir.sepal_width.quantile(0.75)
 iq=c3-c1
 print(c3)
 ```
-![Screenshot 2025-03-04 104441](https://github.com/user-attachments/assets/3549c967-6fa0-40fd-b4c1-19d4e437ff43)
+![Screenshot 2025-03-04 105333](https://github.com/user-attachments/assets/22181ea8-90b1-45f8-907a-2054b0092c7a)
 ```
 rid=ir[((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
 rid['sepal_width']
 ```
+![Screenshot 2025-03-04 104441](https://github.com/user-attachments/assets/3549c967-6fa0-40fd-b4c1-19d4e437ff43)
+```
+delid=ir[~((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+delid
+```
 ![Screenshot 2025-03-04 104458](https://github.com/user-attachments/assets/6246e0a1-416e-4c61-9dc5-ec535b6f146e)
 ```
-sns.boxplot(x='sepal_width',data=ir)
+ sns.boxplot(x='sepal_width',data=delid)
 ```
 ![Screenshot 2025-03-04 104505](https://github.com/user-attachments/assets/e783ee3c-b07e-4a8b-bf5e-3a95b4673028)
 ```
