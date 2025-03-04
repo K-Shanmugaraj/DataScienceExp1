@@ -9,18 +9,12 @@ incorrect ,incompleted , irrelevant , duplicated or improperly formatted. Data c
 erasing data ,but rather finding a way to maximize datasets accuracy without necessarily deleting the
 information.
 ## ALGORITHM:
-STEP 1<br>
-Read the given Data<br>
-STEP 2<br>
-Get the information about the data<br>
-STEP 3<br>
-Remove the null values from the data<br>
-STEP 4<br>
-Save the Clean data to the file<br>
-STEP 5<br>
-Remove outliers using IQR<br>
-STEP 6<br>
-Use zscore of to remove outliers<br>
+STEP 1 : Read the given Data<br>
+STEP 2 : Get the information about the data<br>
+STEP 3 : Remove the null values from the data<br>
+STEP 4 : Save the Clean data to the file<br>
+STEP 5 : Remove outliers using IQR<br>
+STEP 6 : Use zscore of to remove outliers<br>
 ## PROGRAM:
 DEVELOPED BY : SHANMUGA RAJ.K <br>
 REG NO : 212223040192
