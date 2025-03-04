@@ -24,7 +24,8 @@ Use zscore of to remove outliers<br>
 ## PROGRAM:
 DEVELOPED BY : SHANMUGA RAJ.K <br>
 REG NO : 212223040192
-### Codeing:
+## Coding:
+### Data Cleaning:
 
 ```
 import pandas as pd
@@ -73,5 +74,73 @@ data_dropped
 data.fillna({'GENDER':'MALE','NAME':'SRI','ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,'TOTAL':305,'AVG':89.999999})
 ```
 ![Screenshot 2025-03-04 102925](https://github.com/user-attachments/assets/b0dbd700-e932-4af0-9e58-0c6907d1514e)
+
+### IQR(Inter Quartile Range)
+```
+ import pandas as pd
+ import seaborn as sns
+ ir=pd.read_csv('/content/iris.csv')
+ ir
+```
+![Screenshot 2025-03-04 104418](https://github.com/user-attachments/assets/40cf326b-4101-4c3d-99f9-2673a26dff38)
+```
+ir.describe()
+```
+![Screenshot 2025-03-04 104425](https://github.com/user-attachments/assets/9e45fd25-1c49-4bb7-b4c7-8cc11fa4ea22)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104434](https://github.com/user-attachments/assets/a4352ffd-057d-4276-ae03-64181cf849d1)
+```
+c1=ir.sepal_width.quantile(0.25)
+c3=ir.sepal_width.quantile(0.75)
+iq=c3-c1
+print(c3)
+```
+![Screenshot 2025-03-04 104441](https://github.com/user-attachments/assets/3549c967-6fa0-40fd-b4c1-19d4e437ff43)
+```
+rid=ir[((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+rid['sepal_width']
+```
+![Screenshot 2025-03-04 104458](https://github.com/user-attachments/assets/6246e0a1-416e-4c61-9dc5-ec535b6f146e)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104505](https://github.com/user-attachments/assets/e783ee3c-b07e-4a8b-bf5e-3a95b4673028)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104512](https://github.com/user-attachments/assets/216cfefe-2807-48f0-a8db-f24dd0e46db4)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104525](https://github.com/user-attachments/assets/6d55796b-7b73-497d-be18-8d249eafc0fb)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104533](https://github.com/user-attachments/assets/a695edb9-c09c-41fd-8770-98b0bfc340e7)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104541](https://github.com/user-attachments/assets/015c1ab6-efa1-4915-a1a8-ce3c2b95def5)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104550](https://github.com/user-attachments/assets/cdc8e7c7-407b-4eb9-9676-c277ea45ed2e)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104559](https://github.com/user-attachments/assets/482b9bc0-f22b-4bad-97a5-2587c290ed4e)
+```
+sns.boxplot(x='sepal_width',data=ir)
+```
+![Screenshot 2025-03-04 104608](https://github.com/user-attachments/assets/28823442-4103-45a1-a4f2-f064f9e5ea01)
+
+
+
+
+
+
+
 
 
