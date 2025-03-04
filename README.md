@@ -25,3 +25,8 @@ Use zscore of to remove outliers<br>
 DEVELOPED BY : SHANMUGA RAJ.K
 REG NO : 212223040192
 ### Client:
+```
+import pandas as pd
+data=pd.read_csv("/content/SAMPLEIDS.csv")
+data
+```
