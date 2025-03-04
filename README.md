@@ -1,5 +1,6 @@
-**Ex. 1 Data Cleaning and Outlier Detection & Removal**
- AIM
+#Ex. 1 Data Cleaning and Outlier Detection & Removal: 
+
+ ##AIM:
  To read the given data and perform data cleaning and save the cleaned data to a file.
  Explanation
  Data cleaning is the process of preparing data for analysis by removing or modifying data that is
